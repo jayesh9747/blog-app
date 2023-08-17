@@ -1,0 +1,25 @@
+<!-- for including header and footer -->
+<% include ./partials/homeheader.ejs %>
+
+    <div class="container">
+        <h1>HOME</h1>
+        <p>
+            <%= data %>
+        </p>
+    
+    <!-- <%# rendering the blogs  %> -->
+    <%   blogs.forEach((it)=>{   %>
+        <%  const link = "/posts" + `/${it.title}` %>
+            <h2> <%= it.title %></h2>
+            <p> <%= it.data.substring(0,100) + "..." %>
+            <a href="<%= link %>" >Read more</a>    
+            </p>
+            
+     <%   }) %>
+
+    </div>
+    
+   
+    
+<!-- for including the footer -->
+    <% include ./partials/footer.ejs %>

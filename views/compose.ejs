@@ -1,0 +1,20 @@
+<!-- for including header and footer -->
+<% include ./partials//header.ejs %>
+
+
+<h1>Compose</h1>
+<form action="/compose" method="post" >
+    <div class="form-group">
+        <label for="postTitle">Title</label>
+        <input type="text" name="postTitle" id="postTitle" class="form-control" autofocus >
+      </div>
+    <div class="form-group">
+        <label for="blogPost">Post</label>
+        <textarea class="form-control" name="blogPost" id="blogPost" rows="3" style="min-width: 100%"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2"  name="button">Publish</button>
+</form>
+
+<!-- include footer-->
+
+<% include ./partials/footer.ejs %>
